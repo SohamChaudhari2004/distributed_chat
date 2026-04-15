@@ -1,0 +1,15 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - heading "Welcome to dChat" [level=2] [ref=e5]
+    - paragraph [ref=e6]: Distributed Real-time Messaging
+  - generic [ref=e7]:
+    - generic [ref=e8]: Username
+    - textbox "Username" [ref=e9]:
+      - /placeholder: Enter your username
+  - generic [ref=e10]:
+    - generic [ref=e11]: Password
+    - textbox "Password" [ref=e12]:
+      - /placeholder: Enter your password
+  - generic [ref=e13]:
+    - button "Login" [ref=e14] [cursor=pointer]
+    - button "Register" [ref=e15] [cursor=pointer]

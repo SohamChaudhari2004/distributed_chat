@@ -1,0 +1,33 @@
+- generic [ref=e17]:
+  - generic [ref=e18]:
+    - heading "Live Chat" [level=2] [ref=e20]
+    - button "Logout" [ref=e22] [cursor=pointer]
+  - generic [ref=e23]:
+    - generic [ref=e24]:
+      - generic [ref=e25]: user1 • 11:04 PM
+      - generic [ref=e26]: Hello from User1
+    - generic [ref=e27]:
+      - generic [ref=e28]: user2 • 11:04 PM
+      - generic [ref=e29]: Hello from User2
+    - generic [ref=e30]:
+      - generic [ref=e31]: alice • 11:05 PM
+      - generic [ref=e32]: Message 1 from Alice
+    - generic [ref=e33]:
+      - generic [ref=e34]: bob • 11:05 PM
+      - generic [ref=e35]: Message 1 from Bob
+    - generic [ref=e36]:
+      - generic [ref=e37]: alice • 11:05 PM
+      - generic [ref=e38]: Message 2 from Alice
+    - generic [ref=e39]:
+      - generic [ref=e40]: bob • 11:05 PM
+      - generic [ref=e41]: Message 2 from Bob
+    - generic [ref=e42]:
+      - generic [ref=e43]: user1 • 11:05 PM
+      - generic [ref=e44]: Hello from User1
+    - generic [ref=e45]:
+      - generic [ref=e46]: user2 • 11:05 PM
+      - generic [ref=e47]: Hello from User2
+  - generic [ref=e48]:
+    - textbox "Type your message..." [ref=e49]
+    - button [ref=e50] [cursor=pointer]:
+      - img [ref=e51]

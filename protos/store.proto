@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package store;
+
+service StoreService {
+  rpc SaveMessage (SaveMessageRequest) returns (SaveMessageResponse);
+  rpc GetHistory (GetHistoryRequest) returns (GetHistoryResponse);
+}
+
+message SaveMessageRequest {
+  string sender = 1;
+  string message = 2;
+  string timestamp = 3;
+}
+
+message SaveMessageResponse {
+  bool success = 1;
+}
+
+message GetHistoryRequest {
+  int32 limit = 1;
+}
+
+message ChatMessage {
+  string sender = 1;
+  string message = 2;
+  string timestamp = 3;
+}
+
+message GetHistoryResponse {
+  repeated ChatMessage messages = 1;
+}

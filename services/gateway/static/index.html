@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributed Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Auth Container -->
+        <div id="auth" class="card">
+            <div class="header">
+                <h2>Welcome to dChat</h2>
+                <p>Distributed Real-time Messaging</p>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+            </div>
+            <div class="actions">
+                <button class="btn primary" onclick="login()">Login</button>
+                <button class="btn secondary" onclick="register()">Register</button>
+            </div>
+            <div id="auth-error" class="error-msg"></div>
+        </div>
+
+        <!-- Chat Container -->
+        <div id="chat" class="card" style="display:none;">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <h2>Live Chat</h2>
+                    <span class="status-indicator"></span>
+                </div>
+                <button class="btn text-btn" onclick="logout()">Logout</button>
+            </div>
+            <div id="messages" class="messages-container">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="input-area">
+                <input type="text" id="msgInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+                <button class="btn primary" onclick="sendMsg()">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+
+</html>

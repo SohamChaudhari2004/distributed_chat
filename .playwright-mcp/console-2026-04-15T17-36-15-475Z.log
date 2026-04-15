@@ -1,0 +1,11 @@
+[     382ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://localhost:8000/:0
+[     496ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:8000/favicon.ico:0
+[  150868ms] [ERROR] WebSocket connection to 'ws://localhost:8000/ws' failed: Connection closed before receiving a handshake response @ http://localhost:8000/static/app.js:128
+[  150868ms] [ERROR] WebSocket error: Event @ http://localhost:8000/static/app.js:155
+[  193483ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://localhost:8000/:0
+[  388762ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://localhost:8000/:0
+[  389661ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://localhost:8000/:0
+[ 1076439ms] [ERROR] WebSocket connection to 'ws://localhost:8000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8000/static/app.js:128
+[ 1076445ms] [ERROR] WebSocket error: Event @ http://localhost:8000/static/app.js:155
+[ 1081830ms] [ERROR] WebSocket connection to 'ws://localhost:8000/ws' failed: Connection closed before receiving a handshake response @ http://localhost:8000/static/app.js:128
+[ 1081830ms] [ERROR] WebSocket error: Event @ http://localhost:8000/static/app.js:155

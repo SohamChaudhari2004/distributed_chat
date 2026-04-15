@@ -1,0 +1,5 @@
+[     154ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://localhost:8000/:0
+[  584605ms] [ERROR] WebSocket connection to 'ws://localhost:8000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8000/static/app.js:136
+[  584605ms] [ERROR] WebSocket error: Event @ http://localhost:8000/static/app.js:174
+[  591958ms] [ERROR] WebSocket connection to 'ws://localhost:8000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:8000/static/app.js:136
+[  591958ms] [ERROR] WebSocket error: Event @ http://localhost:8000/static/app.js:174

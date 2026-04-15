@@ -1,0 +1,68 @@
+version: "3.8"
+
+services:
+  auth_service:
+    build:
+      context: .
+      dockerfile: services/auth_service/Dockerfile
+    volumes:
+      - auth_data:/data
+    environment:
+      - DB_PATH=/data/auth.db
+    networks:
+      - chat_net
+
+  store_service:
+    build:
+      context: .
+      dockerfile: services/store_service/Dockerfile
+    volumes:
+      - store_data:/data
+    environment:
+      - DB_PATH=/data/store.db
+    networks:
+      - chat_net
+
+  redis:
+    image: redis:alpine
+    networks:
+      - chat_net
+
+  chat_service:
+    build:
+      context: .
+      dockerfile: services/chat_service/Dockerfile
+    environment:
+      - REDIS_HOST=redis
+      - STORE_HOST=store_service:50052
+      - AUTH_HOST=auth_service:50051
+    deploy:
+      replicas: 3
+    networks:
+      - chat_net
+
+  gateway:
+    build:
+      context: .
+      dockerfile: services/gateway/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - AUTH_HOST=auth_service:50051
+      - STORE_HOST=store_service:50052
+      - CHAT_HOST=chat_service:50053
+    volumes:
+      - ./services/gateway/static:/app/services/gateway/static
+    networks:
+      - chat_net
+    depends_on:
+      - auth_service
+      - store_service
+      - chat_service
+
+networks:
+  chat_net:
+
+volumes:
+  auth_data:
+  store_data:
